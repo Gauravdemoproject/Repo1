@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <style>
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            margin-left: 1100px;
+            margin-top: 25px;
+            transition: all;
+            transition-duration: 500ms;
+        }
+        
+            .header-container h1 {
+                margin: 0;
+                font-size: 2.5rem;
+                color: #fff;
+                flex-grow: 1;
+                text-align: left; 
+                padding-left: 20px; 
+            }
+        
+        
+        .logo:hover {
+            transform: scale(1.1);
+            box-shadow: 20px 20px 25px rgba(255, 51, 153, 0.6), 0 0 40px rgba(204, 51, 255, 0.8); 
+
+        }
+        
+ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; 
+    color: #f0f0f0; 
+}
+
+
+header {
+    background-color: #000000; 
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+#home {
+    background: #000000; 
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3); 
+  
+}
+
+
+#home h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+#home p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f0f0f0; 
+}
+
+
+#about {
+    background-color: #000000; 
+    
+        background: linear-gradient(135deg, #1a1a1a, #4d4d4d);
+        position: relative;
+        padding-top: 100px;
+    
+    padding: 60px 20px;
+    color: #f0f0f0; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(135deg, #000, #333);
+    clip-path: polygon(0 0, 100% 100%, 0% 100%);
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; 
+    text-transform: uppercase;
+}
+
+#about p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+#about .highlight {
+    color: #ff63; 
+    font-weight: bold;
+}
+
+
+
+#portfolio {
+    background-color: #000000; 
+    padding: 60px 20px;
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff6347; 
+}
+
+
+#portfolio nav ul {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#portfolio nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+#portfolio nav a {
+    text-decoration: none;
+    color: #0c0cea;
+    font-size: 1.6rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery img {
+    width: 31%;
+    margin: 1%;
+    height: 270px;
+    box-shadow: 0 6px 15px rgba(0, 102, 255, 0.4), 0 0 25px rgba(0, 153, 255, 0.6);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.new {
+    display: flex;
+    justify-content: space-between;
+}
+
+.new img {
+    width: 31%;
+    height: 300px;
+    box-shadow: 0 6px 15px rgba(0, 102, 255, 0.4), 0 0 25px rgba(0, 153, 255, 0.6);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.gallery img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    opacity: 0.9;
+    box-shadow: 0 8px 25px rgba(255, 51, 153, 0.6), 0 0 40px rgba(204, 51, 255, 0.8); /* Pink and purple glow */
+}
+.new img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    box-shadow: 0 8px 25px rgba(255, 51, 153, 0.6), 0 0 40px rgba(204, 51, 255, 0.8); /* Pink and purple glow */
+}
+
+
+/* Contact section */
+#contact {
+    background-color: #000000; 
+    padding: 60px 20px;
+    color: #f0f0f0; 
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 0); 
+}
+
+#contact form {
+    max-width: 400px;
+    margin: auto;
+    background-color: #333; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #444; 
+    color: white;
+}
+
+button {
+    background: linear-gradient(135deg, #2c4f9a, #a86430);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: linear-gradient(135deg, #b76426, #151110);
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    background-image: linear-gradient(160deg, #000000 0%, #8085d0 100%);
+    color: white;
+}
+    </style>
+</head>
+<body>
+  
+    <header>
+        <div class = "Header-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        <h1>My Photography Portfolio</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section id="home">
+        <h2>Welcome to My Photography Portfolio</h2>
+        <p>Explore the art of photography through my lens. Discover landscapes, portraits, wildlife, and events captured with creativity and passion.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a professional photographer with years of experience in capturing life’s most beautiful moments. My passion lies in telling stories through visuals, whether it's breathtaking landscapes or intimate portraits. Let me help you preserve your memories!</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>PORTFOLIO</h2>
+        <nav>
+            <ul>
+                <li><a href="#landscape">Landscape</a></li>
+                <li><a href="#portrait">Portrait</a></li>
+                <li><a href="#wildlife">Wildlife</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+        </nav>
+
+        <section id="landscape">
+            <h3>Landscape Photography</h3>
+            <div class="gallery">
+                <img src="pexels-pixabay-147411.jpg" alt="Landscape 1">
+                <img src="pexels-pixabay-158063.jpg" alt="Landscape 2">
+                <img src="pexels-sebastian-palomino-933481-1955134.jpg" alt="Landscape 3">
+            </div>
+        </section>
+
+        <section id="portrait">
+            <h3>Portrait Photography</h3>
+            <div class="gallery">
+                <img src="images.jpeg" alt="Portrait 1">
+                <img src="images (2).jpeg" alt="Portrait 2">
+                <img src="images (1).jpeg" alt="Portrait 3">
+            </div>
+        </section>
+
+        <section id="wildlife">
+            <h3>Wildlife Photography</h3>
+            <div class="gallery">
+                <img src="pexels-pixabay-209096.jpg" alt="Wildlife 1">
+                <img src="pexels-213167965-17648464.jpg" alt="Wildlife 2">
+                <img src="pexels-alohaphotostudio-5679552.jpg" alt="Wildlife 3">
+            </div>
+        </section>
+
+        <section id="events">
+            <h3>Event Photography</h3>
+            <div class="gallery new">
+                <img src="625853a6dd39ad41041f4e6f_1649955750970.jpg" alt="Event 1">
+                <img src="l.webp" alt="Event 2">
+                <img src="crowd-1056764_640.webp" alt="Event 3">
+            </div>
+        </section>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you're interested in booking a photography session, please fill out the form below:</p>
+        <form id="contactForm" action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="sessionType">Session Type:</label>
+            <select id="sessionType" name="sessionType">
+                <option value="landscape">Landscape</option>
+                <option value="portrait">Portrait</option>
+                <option value="wildlife">Wildlife</option>
+                <option value="event">Event</option>
+            </select>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+    
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+    
+    
+
+    <footer>
+        <p>&copy; 2024 My Photography Portfolio</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const sessionType = document.getElementById('sessionType').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !sessionType || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            alert(`Thank you, ${name}! Your ${sessionType} session request has been received.`);
+            this.submit();
+        });
+    </script>
+</body>
+</html>
